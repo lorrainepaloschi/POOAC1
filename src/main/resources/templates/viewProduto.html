@@ -1,51 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+<html>
+<title> PRODUTO </title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <body>
-    <h1>Detalhes do produto procurado</h1>
-    <table>
-        <tr>
-            <td>
-                <h3>Codigo</h3>
-            </td>
-            <td>
-                <h3>Nome</h3>
-            </td>
-            <td>
-                <h3>Preco</h3>
-            </td>
-            <td>
-                <h3>Quantidade</h3>
-            </td>
-        </tr>
-    </table>
-    <table>
-        <tr>
-            <td>
-                <div>
-                    <h3 th:text="${cod}"></h3>
-                </div>
-            </td>
-            <td>
-                <div>
-                    <h3 th:text="${p?.nome}"></h3>
-                </div>
-            </td>
-            <td>
-                <div>
-                    <h3 th:text="${p?.valor}"></h3>
-                </div>
-            </td>
-            <td>
-                <div>
-                    <h3 th:text="${p?.estoque}"></h3>
-                </div>
-            </td>
-        </tr>
-    </table>
+
+<div class="w3-container">
+<th>
+ 
+    <h2>
+        <b>Detalhes do produto procurado</b>
+    </h2>
+
+</th>
+  <table class="w3-table w3-striped">
+    <tr>
+      <th>Codigo</th>
+      <th>Nome</th>
+      <th>Preco</th>
+      <th>Quantidade</th>
+    </tr>
+    <tr>
+      <td> 
+      		<h5 th:text="${cod}"></h5>
+      </td>
+      <td>
+            <h5 th:text="${p?.nome}"></h5>
+      </td>
+      <td>
+          <h5 th:text="${p?.valor}"></h5>
+      </td>
+      <td>
+          <h5 th:text="${p?.estoque}"></h5>
+      </td>
+    </tr>
+  </table>
+</div>
+
 </body>
 </html>

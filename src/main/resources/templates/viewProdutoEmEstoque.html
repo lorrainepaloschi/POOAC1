@@ -1,19 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+<html>
+<title>Documents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <body>
-    <div th:each="item : ${p}">
-        <div th:each="i : ${item}">
-            <h3 th:text="${i.value.codigo}"></h3>
-            <h3 th:text="${i.value.nome}"></h3>
-            <h3 th:text="${i.value.valor}"></h3>
-            <h3 th:text="${i.value.estoque}"></h3>
-            <br>
-        </div>
-    </div>
+
+<div class="w3-container">
+
+    <table class="w3-table w3-striped">
+        <tr>
+            <th>Codigo</th>
+            <th>Nome</th>
+            <th>Preco</th>
+            <th>Quantidade</th>
+        </tr>
+        <tr th:each="item : ${p}">
+            <div th:each="i : ${item}">
+                <td> 
+                    <h5 th:text="${i.value.codigo}"></h5>
+                    </td>
+                    <td>        
+                        <h5 th:text="${i.value.nome}"></h5>
+                    </td>
+                    <td>
+                    <h5 th:text="${i.value.valor}"></h5>
+                    </td>
+                    <td>
+                    <h5 th:text="${i.value.estoque}"><h5>
+                    </td>
+            </div>
+            
+        </tr>
+    </table>
+</div>
+
 </body>
 </html>
